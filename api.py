@@ -17,7 +17,7 @@ class QuoteModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     quote = db.Column(db.String(100), unique=True, nullable=False)
     author = db.Column(db.String(100), nullable=True)
-    tags = db.Column(db.Text, nullable=True)  # Stored as JSON string
+    tags = db.Column(db.Text, nullable=True)
     vote = db.Column(db.Integer, nullable=False, default=0)
 
     def __repr__(self):
